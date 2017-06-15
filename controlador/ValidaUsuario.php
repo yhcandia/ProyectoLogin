@@ -7,7 +7,7 @@ $oUsu=new Usuario($_REQUEST["nomusuario"],$_REQUEST["clave"]);
 
 if ($oUsu->VerificaUsuarioClave()){
     echo "Todo bien";
-     $_SESSION["usuarioSession"]=$oUsu->nombre;
+     $_SESSION["usuarioSession"]=$oUsu;
 }else{
     echo "<b>Todo mal</b>";
 }

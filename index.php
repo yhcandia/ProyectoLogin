@@ -41,7 +41,10 @@ and open the template in the editor.
                                     $("#frmusuario").hide();
                                     $("#mensaje").hide();
                                     $("#infoSession").show();
-                                    $("#infoSession").html("El usuario <?php echo $_SESSION["usuarioSession"]?> esta logeado");
+                                    $("#infoSession").html("El usuario <?php $oUsu=new Usuario(); 
+                                            $oUsu = $_SESSION["usuarioSession"];
+                                            echo $oUsu->nombre?>esta logeado"); 
+                                            
                                 }
                                 $("#mensaje").html(resultado);
                             }
